@@ -59,7 +59,9 @@
 !< *******************************************************************
        PROGRAM dynac
        implicit real*8 (a-h,o-z)
-       parameter(ncards=64,iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (ncards=64)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/ITVOLE/ITVOL,IMAMIN
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        common/const/pi2,sqpi,pwtpi,sqpi2,sq2pi
@@ -1694,7 +1696,8 @@
 !< *******************************************************************
        SUBROUTINE rmami
        implicit real*8 (a-h,o-z)
-       parameter (maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (maxcell1=3000)
        common/tapes/in,ifile,meta
        common/dyn/tref,vref
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
@@ -1760,7 +1763,8 @@
 !< *******************************************************************
        SUBROUTINE shuffle
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        common/mcs/imcs,ncstat,cstat(20)
        common/macro/ratei
@@ -2697,7 +2701,8 @@
 !< *******************************************************************
        SUBROUTINE intga(npt,ireca)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/HERMT/AFXT(22),AFYT(22),AFZT(22)
@@ -2808,7 +2813,8 @@
 !< *******************************************************************
        SUBROUTINE sizcor(ect,xrms,yrms,zrms,imaxd)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/part/xc(iptsz),yc(iptsz),zc(iptsz)
        COMMON/CGRMS/xsum,ysum,zsum
        common/faisc/f(10,iptsz),imax,ngood
@@ -2855,7 +2861,8 @@
 !< *******************************************************************
        SUBROUTINE sizrms(imaxd,xrms,yrms,zrms,zmin)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/part/xc(iptsz),yc(iptsz),zc(iptsz)
        COMMON/CGRMS/xsum,ysum,zsum
        common/faisc/f(10,iptsz),imax,ngood
@@ -3604,7 +3611,8 @@
 !< *******************************************************************
        SUBROUTINE cdg(IDCH)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        common/etcha1/dav2(maxcell1,33),ichas(iptsz),chasit
        common/etcom/cog(8),exten(17),fd(iptsz)
@@ -3681,7 +3689,8 @@
 !< *******************************************************************
        SUBROUTINE ext2d(IDCH)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        common/faisc/f(10,iptsz),imax,ngood
@@ -3823,7 +3832,8 @@
 !< *******************************************************************
        SUBROUTINE ext2(IDCH)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        common/faisc/f(10,iptsz),imax,ngood
@@ -3941,7 +3951,8 @@
 !< *******************************************************************
        SUBROUTINE chrefe
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        common/faisc/f(10,iptsz),imax,ngood
        COMMON/QMOYEN/QMOY
@@ -3984,7 +3995,8 @@
 !< *******************************************************************
        SUBROUTINE etac
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        common/faisc/f(10,iptsz),imax,ngood
        COMMON/QMOYEN/QMOY
@@ -4202,7 +4214,8 @@
 !< *******************************************************************
        SUBROUTINE gaus(r1,r2,z1,z2,opt,er,ez)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        dimension r(6),z(6),wr(6),wz(6),xx(3,3),wx(3,3)
        data ((xx(i,j),i=1,3),j=1,3)/.2113248654,0.0,0.0,
      1   .06943184420,
@@ -4265,7 +4278,8 @@
 !< *******************************************************************
        SUBROUTINE flds(r,z,er,ez)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/fldcom/ rp, zp,pl,opt,nip
        r1=rp
        z1=zp
@@ -4307,7 +4321,8 @@
 !< *******************************************************************
        SUBROUTINE eint(a,ee,ek)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        b=1.0-a
        c=log(b)
        ee=1.0+b*(.4630106-0.2452740*c+b*(0.1077857-0.04125321*c))
@@ -4321,7 +4336,8 @@
 !< *******************************************************************
        SUBROUTINE tiltz(tilta)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        common/faisc/f(10,iptsz),imax,ngood
        COMMON/QMOYEN/QMOY
@@ -4375,7 +4391,8 @@
 !< *******************************************************************
        SUBROUTINE rfq_o3
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/RIGID/BORO
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/DYN/TREF,VREF
@@ -4870,7 +4887,8 @@
 !< *******************************************************************
        SUBROUTINE intg3(npt)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/HERMT/AFXT(22),AFYT(22),AFZT(22)
@@ -4949,7 +4967,8 @@
 !< *******************************************************************
        SUBROUTINE compress(pib)
        implicit real*8 (a-h,o-z)
-       parameter(iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        common/faisc/f(10,iptsz),imax,ngood
 !       common/etcha1/dav2(maxcell1,33),ichas(iptsz),chasit
@@ -4999,7 +5018,8 @@
 !< *******************************************************************
        SUBROUTINE prbeam(iflg,wfile)
        implicit real*8 (a-h,o-z)
-       parameter(iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        common/faisc/f(10,iptsz),imax,ngood
        common/etcha1/dav2(maxcell1,33),ichas(iptsz),chasit
@@ -8853,7 +8873,8 @@
 !< *******************************************************************
        SUBROUTINE pintfast
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        common/consta/vl,pi,xmat,rpel,qst
        common/dyn/tref,vref
@@ -8961,7 +8982,8 @@
 !< *******************************************************************
        SUBROUTINE hcoef
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        common/consta/vl,pi,xmat,rpel,qst
        common/const/pi2,sqpi,pwtpi,sqpi2,sq2pi
@@ -9250,7 +9272,8 @@
 !< *******************************************************************
        SUBROUTINE hersc(ini)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        common/consta/vl,pi,xmat,rpel,qst
        common/sc3/beamc,scdist,sce10,cplm,ectt,apl,ichaes,iscsp
@@ -10077,7 +10100,8 @@
 !< *******************************************************************
        SUBROUTINE chasel
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
        common/faisc/f(10,iptsz),imax,ngood
@@ -10216,7 +10240,8 @@
 !< *******************************************************************
        SUBROUTINE chasex
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
        common/faisc/f(10,iptsz),imax,ngood
@@ -10358,7 +10383,8 @@
 !< *******************************************************************
        SUBROUTINE chase
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/tapes/in,ifile,meta
        common/etchas/fractx,fracty,fractl
        common/etcha1/dav2(maxcell1,33),ichas(iptsz),chasit
@@ -10383,7 +10409,8 @@
 !< *******************************************************************
        SUBROUTINE chasey
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
        common/faisc/f(10,iptsz),imax,ngood
@@ -10523,7 +10550,8 @@
 !< *******************************************************************
        SUBROUTINE corre(n,nall)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /COM4/CORD(IPTSZ,6)
        DIMENSION A(6,6),B(6,6),C(6,6),D(6),E(6),F(6),G(6)
        DO I =1,6
@@ -10642,7 +10670,8 @@
 !< *******************************************************************
        SUBROUTINE pintim
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        COMMON/QMOYEN/QMOY
        COMMON/PART/XC(iptsz),YC(iptsz),ZC(iptsz)
@@ -10730,7 +10759,8 @@
 !< *******************************************************************
        SUBROUTINE schermi1
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/HERMT/AFXT(22),AFYT(22),AFZT(22)
        COMMON/HERMD/AFXM(20),AFYM(20),AFZM(20)
@@ -10955,7 +10985,8 @@
 !< *******************************************************************
        SUBROUTINE schermi
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/HERMT/AFXT(22),AFYT(22),AFZT(22)
        COMMON/HERMD/AFXM(20),AFYM(20),AFZM(20)
@@ -11369,7 +11400,8 @@
 !< *******************************************************************
        SUBROUTINE entre
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        common/speda/dave,idave
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
@@ -11547,7 +11579,8 @@
 !< *******************************************************************
        SUBROUTINE monte
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/DCSPA/IESP
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON /COM4/CORD(IPTSZ,6)
@@ -12410,7 +12443,8 @@
 !< *******************************************************************
        SUBROUTINE adjrfq
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/DAVCOM/dav1(maxcell1,40),davtot,iitem(maxcell1),idav
        common/speda/dave,idave
@@ -12537,7 +12571,8 @@
 !< *******************************************************************
        SUBROUTINE intfac(tofini)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/etcom/cog(8),exten(17),fd(iptsz)
        COMMON/SHIF/DTIPH,SHIFT
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
@@ -12698,7 +12733,8 @@
 !< *******************************************************************
        SUBROUTINE stapl(zpos)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/pltprf/sprfx(3000),sprfy(3000),sprfl(3000),sprfw(3000),
      *               sprfp(3000),SPRNG(3000),iprf
        common/pltprf1/sprww(3000),eprfw(3000),eprnx(3000),eprny(3000),
@@ -12857,7 +12893,8 @@
 !< *******************************************************************
        SUBROUTINE etgap
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFS/DYNT(MAXCELL),DYNTP(MAXCELL),DYNTPP(MAXCELL),
      *   DYNE0(MAXCELL),DYNPH(MAXCELL),DYNLG(MAXCELL),FHPAR,NC
        COMMON/POSI/IST
@@ -13364,7 +13401,8 @@
 !< *******************************************************************
        SUBROUTINE gap(GAMREF,SAPHI,GAMS,DELPHR)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFS/DYNT(MAXCELL),DYNTP(MAXCELL),DYNTPP(MAXCELL),
      *   DYNE0(MAXCELL),DYNPH(MAXCELL),DYNLG(MAXCELL),FHPAR,NC
        COMMON/POSI/IST
@@ -13623,7 +13661,8 @@
 !< *******************************************************************
        SUBROUTINE cogetc
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        common/cgtof/charm(20),cgtdv(20),nbch(20),netac
        itot=0
@@ -13670,7 +13709,8 @@
 !< *******************************************************************
        SUBROUTINE boucle(ipas,gamref,saphi,dcum,delphr)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/POSI/IST
        COMMON/MIDGAP/ENMIL,VAPMI
        COMMON/AZMTCH/DLG,XMCPH,XMCE
@@ -14398,7 +14438,8 @@
 !< *******************************************************************
        SUBROUTINE bunparm(v,dp,harm,prlim)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/RIGID/BORO
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/DYN/TREF,VREF
@@ -14638,7 +14679,8 @@
 !< *******************************************************************
        SUBROUTINE refer
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/DYN/TREF,VREF
        common/faisc/f(10,iptsz),imax,ngood
@@ -14764,7 +14806,8 @@
        SUBROUTINE steer(fld,nvf)
        implicit real*8 (A-H,O-Z)
 !     4/15/14 - Daniel Alt: Added electrostatic steerers.
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/DYN/TREF,VREF
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
@@ -14862,7 +14905,8 @@
 !< *******************************************************************
        SUBROUTINE emiprt(L)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/etchas/fractx,fracty,fractl
        common/dyn/tref,vref
        common/faisc/f(10,iptsz),imax,ngood
@@ -15178,7 +15222,8 @@
 !< *******************************************************************
        SUBROUTINE emit3d
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/dyn/tref,vref
        common/faisc/f(10,iptsz),imax,ngood
        common/qmoyen/qmoy
@@ -15261,7 +15306,8 @@
 !< *******************************************************************
        SUBROUTINE statis
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/DYN/TREF,VREF
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        common/faisc/f(10,iptsz),imax,ngood
@@ -15358,7 +15404,8 @@
 !< *******************************************************************
        SUBROUTINE tiltbm(icg)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/DAVCOM/dav1(maxcell1,40),davtot,iitem(maxcell1),idav
        COMMON/TILT/TIPHA,TIX,TIY,SHIFW,SHIFP
@@ -15549,7 +15596,8 @@
 !< *******************************************************************
        SUBROUTINE tiltbm_bis(icg)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/DAVCOM/dav1(maxcell1,40),davtot,iitem(maxcell1),idav
        COMMON/TILT/TIPHA,TIX,TIY,SHIFW,SHIFP
@@ -15741,7 +15789,8 @@
 !< *******************************************************************
        SUBROUTINE accept
        implicit real*8 (a-h,o-z)
-       parameter(iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/TAPES/IN,IFILE,META
        common/faisc/f(10,iptsz),imax,ngood
@@ -15866,7 +15915,8 @@
 !< *******************************************************************
        SUBROUTINE ytzp
        implicit real*8 (a-h,o-z)
-       parameter(iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        CHARACTER TEXT*80,PATITL*80
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
@@ -16239,7 +16289,8 @@
 !< *******************************************************************
        SUBROUTINE grcomp(text,iskale)
        implicit real*8 (a-h,o-z)
-       parameter(iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        CHARACTER TEXT*80,PATITL*80
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        common/faisc/f(10,iptsz),imax,ngood
@@ -16452,7 +16503,8 @@
        SUBROUTINE restay
        implicit real*8 (a-h,o-z)
 !      ****************************************************
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFS/DYNT(MAXCELL),DYNTP(MAXCELL),DYNTPP(MAXCELL),
      *   DYNE0(MAXCELL),DYNPH(MAXCELL),DYNLG(MAXCELL),FHPAR,NC
        COMMON/POSI/IST
@@ -18573,7 +18625,8 @@
 !< *******************************************************************
        SUBROUTINE area(init)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        common/consta/vl,pi,xmat,rpel,qst
        common/ttfc/tk,t1k,t2k,sk,s1k,s2k,fh
@@ -19150,7 +19203,8 @@
 !< *******************************************************************
        SUBROUTINE daves
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        common/faisc/f(10,iptsz),imax,ngood
        COMMON/SPEDA/DAVE,idave
@@ -20350,7 +20404,8 @@
 !< *******************************************************************
        SUBROUTINE syrout(ii)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        common/faisc/f(10,iptsz),imax,ngood
        COMMON /BLOC11/ R(6,6), T(6,6,6)
@@ -20392,7 +20447,8 @@
 !< *******************************************************************
        SUBROUTINE syref
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/RADIA/TRT,RMOY,XINTF,CRAE
        COMMON/DYN/TREF,VREF
@@ -20431,7 +20487,8 @@
 !< *******************************************************************
        SUBROUTINE sextu(imk2,arg,xlsex,rg)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/DYN/TREF,VREF
@@ -20627,7 +20684,8 @@
 !< *******************************************************************
        SUBROUTINE qalva(bquad,xlqua,rg)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/DYN/TREF,VREF
@@ -20839,7 +20897,8 @@
 !< *******************************************************************
        SUBROUTINE qasex(iksq,args,argq,xlqua,rg)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/DYN/TREF,VREF
@@ -21298,7 +21357,8 @@
 !< *******************************************************************
        SUBROUTINE solfield(bcret,intgr)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
        COMMON/DYN/TREF,VREF
@@ -21459,7 +21519,8 @@
 !< *******************************************************************
        SUBROUTINE fldsol(dbs,step)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
@@ -21519,7 +21580,8 @@
 !< *******************************************************************
        SUBROUTINE solnoid(imks,arg,xlsol)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
        COMMON/DYN/TREF,VREF
@@ -21810,7 +21872,8 @@
 !< *******************************************************************
        SUBROUTINE solquad(iksq,args,argq,xlsol,rg)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
        COMMON/DYN/TREF,VREF
@@ -22004,7 +22067,8 @@
 !< *******************************************************************
        SUBROUTINE rotat(ii)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        DIMENSION  FF(6)
        IF(II.GE.0) THEN
@@ -22205,7 +22269,8 @@
 !< *******************************************************************
        SUBROUTINE drift(dl)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/RIGID/BORO
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/DYN/TREF,VREF
@@ -22351,7 +22416,8 @@
 !< *******************************************************************
        SUBROUTINE cobeam(ii,xl)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        COMMON /BLOC11/ R(6,6), T(6,6,6)
        common/etcom/cog(8),exten(17),fd(iptsz)
@@ -22408,7 +22474,8 @@
 !< *******************************************************************
        SUBROUTINE disp
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        common/etcom/cog(8),exten(17),fd(iptsz)
        common/mcs/imcs,ncstat,cstat(20)
@@ -22460,7 +22527,8 @@
 !< *******************************************************************
       SUBROUTINE zrotat(zrot)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        common/grot/rzot,izrot
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
@@ -22525,7 +22593,8 @@
 !< *******************************************************************
        SUBROUTINE zrotap(zrot)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        common/grot/rzot,izrot
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
@@ -22573,7 +22642,8 @@
 !< *******************************************************************
        SUBROUTINE aliner
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/ALIN/XL,YL,XPL,YPL
        common/faisc/f(10,iptsz),imax,ngood
        WRITE(16,100) XL,YL,XPL,YPL
@@ -22597,7 +22667,8 @@
 !< *******************************************************************
        SUBROUTINE randali
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/ALIN/XL,YL,XPL,YPL
        common/faisc/f(10,iptsz),imax,ngood
        common/apel/iapel
@@ -22675,7 +22746,8 @@
 !< *******************************************************************
        SUBROUTINE egun(fmult,indp)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/ttfc/tk,t1k,t2k,sk,s1k,s2k,fh
        common/faisc/f(10,iptsz),imax,ngood
        common/consta/ vl,pi, xmat,rpel,qst
@@ -23022,7 +23094,8 @@
 !< *******************************************************************
        SUBROUTINE scheff1_swesson(int)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/DYN/TREF,VREF
        COMMON/CMPTE/IELL
        COMMON/part/xc(iptsz),yc(iptsz),zc(iptsz)
@@ -23999,7 +24072,8 @@
 !< *******************************************************************
        SUBROUTINE accep_rfq(pib)
        implicit real*8 (a-h,o-z)
-       parameter(iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        common/faisc/f(10,iptsz),imax,ngood
        common/etcha1/dav2(maxcell1,33),ichas(iptsz),chasit
@@ -24127,7 +24201,8 @@
 !< *******************************************************************
        SUBROUTINE rfq_parm
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/RIGID/BORO
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/DYN/TREF,VREF
@@ -25114,7 +25189,8 @@
 !< *******************************************************************
         SUBROUTINE stripp
         implicit real*8 (a-h,o-z)
-        parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
         COMMON /SPL/X(4000),Y(4000),S(5000),P(5000),Q(5000)
         common/strip/atm,qs,atms,ths,qop,sqst(6),anp,nqst
         common/mcs/imcs,ncstat,cstat(20)
@@ -25390,7 +25466,8 @@
 !< *******************************************************************
        SUBROUTINE qelec(volt,xlqua,rs)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/DYN/TREF,VREF
@@ -25601,7 +25678,8 @@
 !< *******************************************************************
        SUBROUTINE qfk (ityqu,arg,xlqua,rs)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/DYN/TREF,VREF
@@ -25873,7 +25951,8 @@
 !< *******************************************************************
        SUBROUTINE cavnum
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFS/DYNT(MAXCELL),DYNTP(MAXCELL),DYNTPP(MAXCELL),
      *   DYNE0(MAXCELL),DYNPH(MAXCELL),DYNLG(MAXCELL),FHPAR,NC
        COMMON/POSI/IST
@@ -27106,7 +27185,8 @@
 !< *******************************************************************
        SUBROUTINE bcnum(phref,ylg,ncell)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/DYN/TREF,VREF
        COMMON/SC3/BEAMC,SCDIST,SCE10,CPLM,ECT,APL,ICHAES,ISCSP
        common/dcspa/iesp
@@ -27315,7 +27395,8 @@
 !< *******************************************************************
        SUBROUTINE reject(ilost)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        common/faisc/f(10,iptsz),imax,ngood
@@ -27481,7 +27562,8 @@
        SUBROUTINE aimalv (ANGL,RMO,BAIM,XN,XB,EK1,EK2,PENT1,RAB1,
      *                   SK1,SK2,PENT2,RAB2)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/SC3/BEAMC,SCDIST,SCE10,CPLM,ECT,APL,ICHAES,ISCSP
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
@@ -28074,7 +28156,8 @@
 !< *******************************************************************
        SUBROUTINE e_deflec
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON/SC3/BEAMC,SCDIST,SCE10,CPLM,ECT,APL,ICHAES,ISCSP
        COMMON/FENE/WDISP,WPHAS,WX,WY,RLIM,IFW
@@ -28359,7 +28442,8 @@
 !< *******************************************************************
        SUBROUTINE cesp(xlqua)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/SC3/BEAMC,SCDIST,SCE10,CPLM,ECT,APL,ICHAES,ISCSP
        COMMON/CDEK/DWP(iptsz)
        COMMON/DCSPA/IESP
@@ -28412,7 +28496,8 @@
 !< *******************************************************************
        SUBROUTINE sizer(ist,xrms,yrms,zrms)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/part/xc(iptsz),yc(iptsz),zc(iptsz)
        COMMON/CGRMS/xsum,ysum,zsum
        common/faisc/f(10,iptsz),imax,ngood
@@ -28455,7 +28540,8 @@
 !< *******************************************************************
        SUBROUTINE pintim1(ist)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        common/faisc/f(10,iptsz),imax,ngood
        COMMON/QMOYEN/QMOY
        COMMON/PART/XC(iptsz),YC(iptsz),ZC(iptsz)
@@ -28552,7 +28638,8 @@
 !< *******************************************************************
        SUBROUTINE b_sep(isepa)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/part/xc(iptsz),yc(iptsz),zc(iptsz)
        COMMON/CGRMS/xsum,ysum,zsum
        common/faisc/f(10,iptsz),imax,ngood
@@ -28673,7 +28760,8 @@
 !< *******************************************************************
        SUBROUTINE schefini
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/DYN/TREF,VREF
        COMMON/TTFC/TK,T1K,T2K,SK,S1K,S2K,FH
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
@@ -28755,7 +28843,8 @@
 !< *******************************************************************
        SUBROUTINE scheff1(idum)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/DYN/TREF,VREF
        COMMON/CMPTE/IELL
        COMMON/part/xc(iptsz),yc(iptsz),zc(iptsz)
@@ -29214,7 +29303,8 @@
 !< *******************************************************************
        SUBROUTINE scheff_sep
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/DYN/TREF,VREF
        COMMON/CMPTE/IELL
        COMMON/part/xc(iptsz),yc(iptsz),zc(iptsz)
@@ -29638,7 +29728,8 @@
 !< *******************************************************************
        SUBROUTINE rfkick(v,dp,harm,nvf)
        implicit real*8 (a-h,o-z)
-       parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
+       parameter (iptsz=100002,maxcell=6000,maxcell1=6000)
+!      parameter (iptsz=100002,maxcell=3000,maxcell1=3000)
        COMMON/RIGID/BORO
        COMMON /CONSTA/ VL, PI, XMAT, RPEL, QST
        COMMON/DYN/TREF,VREF
